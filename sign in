@@ -1,0 +1,175 @@
+<!doctype html>
+
+<html> 
+
+ <head> 
+
+  <title>sign in</title> 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+  <style>
+
+    .container{
+
+      background: #fff;
+
+      height: 400px;
+
+  width: 500px;
+
+  text-align: center;
+
+  padding-top: 25px;
+
+}
+
+.s1 {
+
+ width: 70%;
+
+ border-radius: 30px;
+
+}
+
+.c1{
+
+  width: 70%;
+
+}
+
+.c2{
+
+  width: 70%;
+
+  padding-left: 10px;
+
+  margin-left: 45px;
+
+}
+
+hr
+
+{
+
+  margin-top: 20px;
+
+  width: 80%;
+
+}
+
+.a1
+
+{
+
+  background: #fff;
+
+  width: 30px;
+
+  margin: -31px auto 10px;
+
+  }
+
+  .btn
+
+  {
+
+    all: initial;
+
+     transform: translatex(-55px);
+
+  }
+
+</style> 
+
+ </head> 
+
+ <body> 
+
+  <div class="jumbotron"> 
+
+   <div class="container"> 
+
+    <h1>Sign In</h1> 
+
+    <form class="needs-validation" novalidate> 
+
+     <div class="form-group"> 
+
+      <input class="c1" type="text" placeholder="Email or Phone" required> <small class="invalid-feedback">please enter an email address or phone number</small> 
+
+     </div> 
+
+     <div class="form-group"> 
+
+      <input class="c2" type="password" placeholder=" password" required id=""> <small class="invalid-feedback">enter your password</small> <button class="btn" onclick="fun()">Show</button> 
+
+     </div> 
+
+     <div class="form-group"> <a href=""><small>forget password?</small></a> 
+
+     </div> 
+
+     <div class="form-group"> 
+
+      <input class="s1 btn-primary" type="submit" value="sign in"> 
+
+     </div> 
+
+     <hr> 
+
+     <p class="a1">or</p> 
+
+     <div class="form-group"> 
+
+      <input class="s1 btn-primary" type="submit" value="Create a new Account"> 
+
+     </div> 
+
+    </form> 
+
+   </div> 
+
+  </div> 
+
+  <script>
+
+    var b1=document.querySelector(".needs-validation");
+
+    b1.addEventListener("click",function(e){
+
+      e.preventDefault();
+
+      b1.classList.add("was-validated");
+
+     })
+
+    var n1=document.querySelector('.c2');
+
+    var c=document.querySelector('button');
+
+  function fun(){
+
+     if(n1.type==='password'){
+
+     n1.type='text';
+
+     c.innerHTML='Hide';
+
+     }
+
+     else{
+
+       n1.type='password';
+
+       c.innerHTML='Show';
+
+       }}
+
+       console.log(n1);
+
+  </script> 
+
+ </body>
+
+</html>
