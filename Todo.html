@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html> 
+
+ <head>
+
+   <style>
+
+     .filtered{
+
+       background-color: red;
+
+       display: none;
+
+     } 
+
+   </style>  
+
+ </head> 
+
+ <body> 
+
+  <form class="c1" name="s2"> 
+
+   <input type="text"> 
+
+  </form> 
+
+  <ul> 
+
+   <li>LIST1</li> 
+
+   <li>LIST2</li> 
+
+   <li>LIST3</li> 
+
+  </ul> 
+
+  <form class="c2"> 
+
+   <input type="text" name="s1"> 
+
+  </form> 
+
+  <script>
+
+        var list=document.querySelector('ul');
+
+     var f=document.querySelector('.c2');
+
+     var b=document.querySelector('.c1');
+
+     function f2(y){
+
+       //console.log(y);
+
+      Array.from(list.children). 
+
+      filter(function(n1){
+
+        return(n1.textContent.includes(y));
+
+      })
+
+      .forEach(function(d1){
+
+      d1.classList.add('filtered');
+
+      })
+
+      Array.from(list.children).
+
+      filter(function(n1){
+
+        return (n1.textContent.includes(y));
+
+      })
+
+      .forEach(function(d1){
+
+      d1.classList.remove('filtered');
+
+      })
+
+      }
+
+     b.addEventListener('keyup',function(e){
+
+       //console.log(b);
+
+       f2(b.s2.value);
+
+     })
+
+     
+
+     function f1(x){
+
+       //console.log(x);
+
+       var h1='<li>${x}</li>';
+
+       list.innerHTML+=h1;
+
+     }
+
+     //f1(shiva)
+
+     f.addEventListener('submit',function(e){
+
+       e.preventDefault();
+
+       //console.log(f.s1.value);
+
+       f1(f.s1.value);
+
+       f1.reset();
+
+     })
+
+      </script> 
+
+ </body>
+
+</html>
